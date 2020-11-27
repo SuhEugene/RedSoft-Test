@@ -62,8 +62,6 @@ export default {
     async toggleCart (painting) {
       console.log(this.cart)
 
-      // Также в большом проекте есть id
-      // Здесь не добавляю ничего лишнего
       let inCart = !!this.cart.find(item => item.title == painting.title);
       if (inCart) {
         this.cart = this.cart.filter(item => item.title != painting.title);
